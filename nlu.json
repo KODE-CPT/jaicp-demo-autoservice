@@ -256,7 +256,35 @@
     "patterns" : [ "* на какое время * @maintrance *", "* пробег* * @maintrance *", "* когда * @maintrance *" ],
     "priority" : 0
   }, {
-    "path" : "/KnowledgeBase/FAQ. Техосмотр/Root/Зачем нужно ТО",
+    "path" : "/KnowledgeBase/FAQ. Техосмотр/Root/Сколько по времени занимает ТО",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "сколько часов длится техосмотр"
+    }, {
+      "text" : "сколько времени займет прохождение то"
+    }, {
+      "text" : "Сколько по времени занимает ТО"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* сколько (дней/часов) * @maintrance *", "* сколько по времени * @maintrance *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ. Техосмотр/Root/Что входит в плановое ТО",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Что входит в плановое ТО"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ. Техосмотр/Root/Зачем нужно ТО (переделать)",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
@@ -264,12 +292,30 @@
     }, {
       "text" : "для чего нужно технобслуживание"
     }, {
-      "text" : "Зачем нужно ТО"
+      "text" : "Зачем нужно ТО (переделать)"
     } ],
     "classificationRules" : {
       "refs" : [ ]
     },
     "patterns" : [ "* (зачем/для чего) * @maintrance *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ. Техосмотр/Root/Скидки",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "почему дорого"
+    }, {
+      "text" : "сбросьте цену"
+    }, {
+      "text" : "подешевле"
+    }, {
+      "text" : "Скидки"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* ~акция *", "* ~скидка *" ],
     "priority" : 0
   } ],
   "entities" : [ {
@@ -1471,9 +1517,9 @@
     "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Сколько стоит ТО",
     "replies" : [ {
       "type" : "text",
-      "text" : "Стоимость обслуживания можно рассчитать <a href=\"http://someautodealer/techservice#calculate\" target=\"_blank\">на нашем сайте</a>.",
+      "text" : "Стоимость обслуживания можно рассчитать <a href=\"http://www.someautodealer/techservice#calculate\" target=\"_blank\">на нашем сайте</a>.",
       "markup" : "html",
-      "key" : "_yzgbdbkyc"
+      "key" : "_g93l4ykrx"
     } ]
   }, {
     "intentPath" : "/KnowledgeBase/FAQ. Техосмотр",
@@ -1482,7 +1528,7 @@
     "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Конфликтная ситуация",
     "replies" : [ {
       "type" : "text",
-      "text" : "Сожалею, что так вышло. <a href=\"http://someautodealer/contacts\" target=\"_blank\">Позвоните моим коллегам</a>, чтобы разобраться в ситуации.",
+      "text" : "Сожалею, что так вышло. <a href=\"http://www.someautodealer/contacts\" target=\"_blank\">Свяжитесь с моими коллегам</a>, чтобы разобраться в ситуации.",
       "markup" : "html",
       "key" : "_o8zap7zvw"
     } ]
@@ -1490,16 +1536,41 @@
     "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Когда ехать на ТО",
     "replies" : [ {
       "type" : "text",
-      "text" : "График технического обслуживания можно узнать <a href=\"http://someautodealer/techservice\" target=\"_blank\">на этой странице</a>.",
+      "text" : "График технического обслуживания можно узнать <a href=\"http://www.someautodealer/techservice\" target=\"_blank\">на этой странице</a>.",
       "markup" : "html",
       "key" : "_w1kui6kb6"
     } ]
   }, {
-    "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Зачем нужно ТО",
+    "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Сколько по времени занимает ТО",
     "replies" : [ {
       "type" : "text",
-      "text" : "",
-      "markup" : "plain"
+      "text" : "В среднем техническое обслуживание занимает 2 часа. Точное время зависит от конкретного плана работ.",
+      "markup" : "plain",
+      "key" : "_ioidfcluc"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Что входит в плановое ТО",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "План работ технического обслуживания можно узнать <a href=\"http://www.someautodealer/techservice\" target=\"_blank\">на нашем сайте</a>.",
+      "markup" : "html",
+      "key" : "_n57esrjc3"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Зачем нужно ТО (переделать)",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Техническое обслуживание нужно, чтобы предотвратить вероятность случайных поломок, а также произвести\nрегулировку всех основных узлов и агрегатов, чтобы максимально снизить расход топлива и смазочных\nматериалов.",
+      "markup" : "plain",
+      "key" : "_laqdqyx7x"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Скидки",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Собрали акции и специальные предложения&nbsp;<a href=\"http://www.someautodealer/techservice#actions\" target=\"_blank\">на этой странице</a>.&nbsp;",
+      "markup" : "html",
+      "key" : "_09y1oh7o6"
     } ]
   } ],
   "skills" : [ ]
