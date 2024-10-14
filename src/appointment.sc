@@ -7,12 +7,13 @@ theme: /appointment
             $session.phone = $parseTree._Phone;
             if ($parseTree._Model) {$session.car = $parseTree._Model.name}
             else if ($parseTree._Brand) {$session.car = $parseTree._Brand.name}
-        go!: ../New/Name
+        go!: ../New
         
     state: New
+        a: Хорошо. Давайте составим заявку на техобслуживание.
+        go!: ./Name
         
         state: Name
-            a: Хорошо. Давайте составим заявку на техобслуживание.
             if: $session.clientName
                 go!: ../Phone
             go!: ./Question
@@ -38,9 +39,9 @@ theme: /appointment
             go!: ./Question
                 
             state: Question
-                a: Напишите ваш номер телефона. Мы позвоним вам, чтобы согласовать время.
+                a: Напишите ваш номер телефона. Мы позвоним на него, чтобы согласовать время.
                 buttons: 
-                    "Лучше пишите в Телеграм" -> ../useTelegram
+                    "Напишите мне в Телеграм" -> ../useTelegram
                 go: ../Answer
                 
             state: Answer
@@ -52,14 +53,14 @@ theme: /appointment
                 event: noMatch 
                 a: Не похоже на номер телефона. Напишите его полностью.
                 buttons: 
-                    "Лучше пишите в Телеграм" -> ../useTelegram
+                    "Напишите мне в Телеграм" -> ../useTelegram
         
             state: useTelegram
                 q: * (телеграм/telegram) *
                 script: 
                     $session.useTelegram = true
                     $session.telegram = "telegramUser"  // Заглушка для прохождения автотестов
-                a: Хорошо!
+                a: Хорошо
                 go!: ../../Car
         
         state: Car
