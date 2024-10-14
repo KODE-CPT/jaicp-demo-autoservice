@@ -7,7 +7,7 @@ require: js/scripts.js
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
   
-theme: /
+theme: /main
 
     state: Start
         q!: $regex</start>
