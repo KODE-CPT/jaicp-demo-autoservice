@@ -54,7 +54,11 @@
     "path" : "/записаться на ТО",
     "enabled" : true,
     "shared" : false,
-    "phrases" : [ ],
+    "phrases" : [ {
+      "text" : "запиши меня на техосмотр"
+    }, {
+      "text" : "хочу пройти то"
+    } ],
     "classificationRules" : {
       "refs" : [ ]
     },
