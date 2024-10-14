@@ -35,8 +35,8 @@ theme: /main
             <br> В среднем техническое обслуживание занимает 2 часа. Зависит от конкретного плана работ.
             <br>
             <br>❓<b>И сколько это стоит?</b> 
-            <br>- <a href=\"http://www.someautodealer/techservice#calculate\">Калькулятор стоимости</a>.
-            <br>- <a href=\"http://www.someautodealer/techservice#actions\">Акции и специальные предложения</a>. 
+            <br> - <a href=\"http://www.someautodealer/techservice#calculate\">Калькулятор стоимости</a>.
+            <br> - <a href=\"http://www.someautodealer/techservice#actions\">Акции и специальные предложения</a>. 
             <br>
             <br>❓<b>А как записаться?</b> 
             <br>Нажмите кнпоку «Записаться на ТО» и заполните небольшую заявку. Наш специалист свяжется с вами и согласует время."
