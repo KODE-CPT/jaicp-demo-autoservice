@@ -42,7 +42,7 @@ theme: /main
             <br>Нажмите кнпоку «Записаться на ТО» и заполните небольшую заявку. Наш специалист свяжется с вами и согласует время."
         
         buttons:
-            "Записаться на ТО" -> /appointment/Start        
+            "Записаться на ТО" -> /appointment/Start
     
     state: KnowledgeBase
         intentGroup!: /KnowledgeBase
