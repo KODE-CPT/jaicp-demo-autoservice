@@ -1,18 +1,20 @@
+require: appointment.sc
+require: smalltalk.sc
+require: patterns.sc
+
+require: js/scripts.js
+    
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
+  
 theme: /
 
     state: Start
         q!: $regex</start>
-        a: Начнём.
-
-    state: Hello
-        intent!: /привет
-        a: Привет привет
-
-    state: Bye
-        intent!: /пока
-        a: Пока пока
+        script: $context.session = {};
+        a: Здравствуйте! Чем я могу помочь?
+        buttons:
+            "Записаться на ТО" -> /appointment/Start
 
     state: NoMatch
         event!: noMatch
@@ -21,3 +23,8 @@ theme: /
     state: Match
         event!: match
         a: {{$context.intent.answer}}
+
+    state: KnowledgeBase
+        intentGroup!: /KnowledgeBase
+        script:
+            $faq.pushReplies();

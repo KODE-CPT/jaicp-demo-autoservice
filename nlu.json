@@ -1,97 +1,1502 @@
 {
-    "project": {
-        "id": "zb-cailapub",
-        "name": "zb-cailapub",
-        "folder": "/platform"
+  "project" : {
+    "id" : "demo_avtoservis-250743983-eZi",
+    "name" : "demo_avtoservis-250743983-eZi",
+    "folder" : "/platform"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "Europe/Moscow",
+    "extendedSettings" : {
+      "classificationAlgorithmVersion" : 1.0,
+      "tokenizerEngine" : "mystem",
+      "useShared" : false
     },
-    "settings": {
-        "language": "ru",
-        "spellingCorrection": false,
-        "classificationAlgorithm": "sts",
-        "validation": {
-            "phraseValidationEnabled": true,
-            "answerValidationEnabled": true,
-            "phraseValidationThreshold": 0.5,
-            "answerValidationThreshold": 0.8
-        },
-        "timezone": "Europe/Moscow",
-        "extendedSettings": {
-            "classificationAlgorithmVersion": 1.0,
-            "tokenizerEngine": "mystem",
-            "useShared": false
-        }
+    "shared" : false,
+    "validation" : {
+      "phraseValidationEnabled" : true,
+      "answerValidationEnabled" : true,
+      "phraseValidationThreshold" : 0.5,
+      "answerValidationThreshold" : 0.8
+    }
+  },
+  "intents" : [ {
+    "path" : "/KnowledgeBase/FAQ. Техосмотр/Root/Сколько стоит ТО",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "сколько будет стоить осмотр"
+    }, {
+      "text" : "дорого выйдет осмотр"
+    }, {
+      "text" : "стоимость техосмотра"
+    }, {
+      "text" : "cколько стоит ТО"
+    }, {
+      "text" : "Сколько стоит ТО"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
     },
-    "intents": [
-        {
-            "path": "/пока",
-            "description": null,
-            "answer": null,
-            "customData": null,
-            "enabled": true,
-            "phrases": [
-                {
-                    "text": "пока",
-                    "entities": null
-                }
-            ],
-            "patterns": null,
-            "slots": null
-        },
-        {
-            "path": "/привет",
-            "description": null,
-            "answer": null,
-            "customData": null,
-            "enabled": true,
-            "phrases": [
-                {
-                    "text": "привет",
-                    "entities": null
-                }
-            ],
-            "patterns": null,
-            "slots": null
-        }
-    ],
-    "entities": [],
-    "enabledSystemEntities": [
-        "duckling.number",
-        "duckling.time",
-        "duckling.duration",
-        "duckling.phone-number",
-        "duckling.email",
-        "duckling.url"
-    ],
-    "systemEntities": [
-        {
-            "name": "duckling.number",
-            "version": "v2",
-            "enabled": true
-        },
-        {
-            "name": "duckling.time",
-            "version": "v2",
-            "enabled": true
-        },
-        {
-            "name": "duckling.duration",
-            "version": "v2",
-            "enabled": true
-        },
-        {
-            "name": "duckling.phone-number",
-            "version": "v2",
-            "enabled": true
-        },
-        {
-            "name": "duckling.email",
-            "version": "v2",
-            "enabled": true
-        },
-        {
-            "name": "duckling.url",
-            "version": "v2",
-            "enabled": true
-        }
-    ]
+    "patterns" : [ "* стоимость * @maintrance *", "* будет стоить * @maintrance *", "* стоит * @maintrance *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ. Техосмотр",
+    "enabled" : true,
+    "shared" : false,
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "priority" : 0
+  }, {
+    "path" : "/записаться на ТО",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* (пройти/проходить) * @maintenance *", "* (запиши/записаться) * @maintenance *", "*  ~заявка * @maintenance *", "* (отправить/отправиться) * @maintenance *" ],
+    "slots" : [ {
+      "name" : "Name",
+      "entity" : "pymorphy.name",
+      "required" : false,
+      "prompts" : [ ]
+    }, {
+      "name" : "Surname",
+      "entity" : "pymorphy.surn",
+      "required" : false,
+      "prompts" : [ ],
+      "array" : false
+    }, {
+      "name" : "Phone",
+      "entity" : "duckling.phone-number",
+      "required" : false,
+      "prompts" : [ ]
+    }, {
+      "name" : "Brand",
+      "entity" : "brand",
+      "required" : false,
+      "prompts" : [ ]
+    }, {
+      "name" : "Model",
+      "entity" : "model",
+      "required" : false,
+      "prompts" : [ ]
+    } ],
+    "priority" : 0
+  }, {
+    "path" : "/хорошо",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "хорошо"
+    }, {
+      "text" : "супер"
+    }, {
+      "text" : "нормально"
+    }, {
+      "text" : "норм"
+    }, {
+      "text" : "отлично"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ. Техосмотр/Root/Конфликтная ситуация",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "обещали одну цену, а вышла другая"
+    }, {
+      "text" : "дороже, чем обещали"
+    }, {
+      "text" : "выставили другую сумму"
+    }, {
+      "text" : "подать жалобу"
+    }, {
+      "text" : "не доволен результатом"
+    }, {
+      "text" : "не доволен работой"
+    }, {
+      "text" : "не захотели исправлять гарантийный случай"
+    }, {
+      "text" : "отказываетесь менять "
+    }, {
+      "text" : "повредили во время то"
+    }, {
+      "text" : "проебали сроки"
+    }, {
+      "text" : "нихуя не сделали"
+    }, {
+      "text" : "ничего не сделали"
+    }, {
+      "text" : "сотрудники всё сломали"
+    }, {
+      "text" : "Конфликтная ситуация"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* (нагрубили/нахамили) *", "* отказались (делать/менять/заменить/чинить) *", "* (вы/сотрудники/мне) * не (сделали/починили) *", "* (вы/сотрудники/мне) * (сломали/повредили/испортили) *" ],
+    "priority" : 0
+  }, {
+    "path" : "/кто ты",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "кто ты"
+    }, {
+      "text" : "как тебя зовут"
+    }, {
+      "text" : "как твоё имя"
+    }, {
+      "text" : "как тебя называть"
+    }, {
+      "text" : "представься"
+    }, {
+      "text" : "что ты такое"
+    }, {
+      "text" : "ты бот"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/пока",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "пока"
+    }, {
+      "text" : "до свидания"
+    }, {
+      "text" : "до встречи"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/привет",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "привет"
+    }, {
+      "text" : "здравствуй"
+    }, {
+      "text" : "хай"
+    }, {
+      "text" : "здоров"
+    }, {
+      "text" : "добрый день"
+    }, {
+      "text" : "добрый вечер"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/плохо",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "плохо"
+    }, {
+      "text" : "не очень"
+    }, {
+      "text" : "ужасно"
+    }, {
+      "text" : "хрено"
+    }, {
+      "text" : "так себе"
+    }, {
+      "text" : "отвратительно"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ. Техосмотр/Root/Когда ехать на ТО",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "нужно ли делать то "
+    }, {
+      "text" : "* нужно ли * @maintrance *"
+    }, {
+      "text" : "когда нужно делать техосмотр"
+    }, {
+      "text" : "когда ехать на ТО"
+    }, {
+      "text" : "с каким пробегом ехать"
+    }, {
+      "text" : "Когда ехать на ТО"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* на какое время * @maintrance *", "* пробег* * @maintrance *", "* когда * @maintrance *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ. Техосмотр/Root/Зачем нужно ТО",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "зачем нужно проходить техосмотр"
+    }, {
+      "text" : "для чего нужно технобслуживание"
+    }, {
+      "text" : "Зачем нужно ТО"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* (зачем/для чего) * @maintrance *" ],
+    "priority" : 0
+  } ],
+  "entities" : [ {
+    "entity" : {
+      "name" : "maintenance",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "ТО", "ТЭО", "техобслуживание", "техносмотр", "техническое обслуживание", "техоб", "тех обслуживание" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "brand",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Acura", "Акура" ],
+      "value" : "{\"name\":\"Acura\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Alfa Romeo", "Альфа Ромео" ],
+      "value" : "{\"name\":\"Alfa Romeo\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Aston Martin", "Астон Мартин" ],
+      "value" : "{\"name\":\"Aston Martin\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Audi", "Ауди" ],
+      "value" : "{\"name\":\"Audi\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Avatr", "Аватар" ],
+      "value" : "{\"name\":\"Avatr\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Baic", "Бэйк" ],
+      "value" : "{\"name\":\"Baic\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Belgeee", "Белджи" ],
+      "value" : "{\"name\":\"Belgeee\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Bentley", "Бентли" ],
+      "value" : "{\"name\":\"Bentley\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "BMW", "БМВ", "Бэха" ],
+      "value" : "{\"name\":\"BMW\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Brilliance", "Бриллианс" ],
+      "value" : "{\"name\":\"Brilliance\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Bugatti", "Бугатти" ],
+      "value" : "{\"name\":\"Bugatti\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Buick", "Бьюик" ],
+      "value" : "{\"name\":\"Buick\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Byd", "БИД" ],
+      "value" : "{\"name\":\"Byd\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Cadillac", "Кадиллак" ],
+      "value" : "{\"name\":\"Cadillac\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Changan", "Чанган" ],
+      "value" : "{\"name\":\"Changan\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Chery", "Чери", "Черри" ],
+      "value" : "{\"name\":\"Chery\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Chevrolet", "Шевроле" ],
+      "value" : "{\"name\":\"Chevrolet\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Chrysler", "Крайслер" ],
+      "value" : "{\"name\":\"Chrysler\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Citroen", "Ситроен" ],
+      "value" : "{\"name\":\"Citroen\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Dacia", "Дачия" ],
+      "value" : "{\"name\":\"Dacia\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Daewoo", "Дэу" ],
+      "value" : "{\"name\":\"Daewoo\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Daihatsu", "Дайхатсу" ],
+      "value" : "{\"name\":\"Daihatsu\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Datsun", "Датсун" ],
+      "value" : "{\"name\":\"Datsun\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Dodge", "Додж" ],
+      "value" : "{\"name\":\"Dodge\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Dongfeng", "Дунфэн" ],
+      "value" : "{\"name\":\"Dongfeng\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "EVOLUTE", "Эволют" ],
+      "value" : "{\"name\":\"EVOLUTE i-PRO\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Exeed", "Эксид" ],
+      "value" : "{\"name\":\"Exeed\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Faw", "Фав" ],
+      "value" : "{\"name\":\"Faw\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Ferrari", "Феррари" ],
+      "value" : "{\"name\":\"Ferrari\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Fiat", "Фиат" ],
+      "value" : "{\"name\":\"Fiat\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Ford", "Форд" ],
+      "value" : "{\"name\":\"Ford\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "GAC", "ГАК" ],
+      "value" : "{\"name\":\"GAC\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Geely", "Джили" ],
+      "value" : "{\"name\":\"Geely\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Genesis", "Генезис" ],
+      "value" : "{\"name\":\"Genesis\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "GMC", "ДжиЭмСи" ],
+      "value" : "{\"name\":\"GMC\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Great Wall", "Грейт Волл" ],
+      "value" : "{\"name\":\"Great Wall\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Haima", "Хайма" ],
+      "value" : "{\"name\":\"Haima\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Haval", "Хавейл" ],
+      "value" : "{\"name\":\"Haval\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Honda", "Хонда" ],
+      "value" : "{\"name\":\"Honda\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Hongqi", "Хунци" ],
+      "value" : "{\"name\":\"Hongqi\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Hummer", "Хаммер" ],
+      "value" : "{\"name\":\"Hummer\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Hyundai", "Хендай" ],
+      "value" : "{\"name\":\"Hyundai\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Infiniti", "Инфинити" ],
+      "value" : "{\"name\":\"Infiniti\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Isuzu", "Исузу" ],
+      "value" : "{\"name\":\"Isuzu\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "JAC", "Жак" ],
+      "value" : "{\"name\":\"JAC\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Jaecoo", "Джека" ],
+      "value" : "{\"name\":\"Jaecoo\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Jaguar", "Ягуар" ],
+      "value" : "{\"name\":\"Jaguar\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Jeep", "Джип" ],
+      "value" : "{\"name\":\"Jeep\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Jetour", "Джетур" ],
+      "value" : "{\"name\":\"Jetour\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Kaiyi", "Каи" ],
+      "value" : "{\"name\":\"Kaiyi\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Kia", "Киа" ],
+      "value" : "{\"name\":\"Kia\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Lamborghini", "Ламборгини", "Ламборджини", "Ламба", "Ламбо" ],
+      "value" : "{\"name\":\"Lamborghini\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Lancia", "Лянча" ],
+      "value" : "{\"name\":\"Lancia\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Land Rover", "Ленд Ровер" ],
+      "value" : "{\"name\":\"Land Rover\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Leapmotor", "Липмотор" ],
+      "value" : "{\"name\":\"Leapmotor\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Lexus", "Лексус" ],
+      "value" : "{\"name\":\"Lexus\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Lifan", "Лифан" ],
+      "value" : "{\"name\":\"Lifan\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Lincoln", "Линкольн" ],
+      "value" : "{\"name\":\"Lincoln\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "LiXiang", "ЛиСян" ],
+      "value" : "{\"name\":\"LiXiang\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Lotus", "Лотус" ],
+      "value" : "{\"name\":\"Lotus\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Lynk & Co", "Линк & Ко" ],
+      "value" : "{\"name\":\"Lynk & Co\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "MAN", "МАН" ],
+      "value" : "{\"name\":\"MAN\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Marussia", "Маруссия" ],
+      "value" : "{\"name\":\"Marussia\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Maserati", "Мазерати" ],
+      "value" : "{\"name\":\"Maserati\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Maybach", "Майбах" ],
+      "value" : "{\"name\":\"Maybach\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Mazda", "Мазда" ],
+      "value" : "{\"name\":\"Mazda\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "McLaren", "Макларен" ],
+      "value" : "{\"name\":\"McLaren\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Mercedes", "Мерседес", "Мэрс", "Мерс" ],
+      "value" : "{\"name\":\"Mercedes\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Mini", "Мини" ],
+      "value" : "{\"name\":\"Mini\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Mitsubishi", "Митсубиси" ],
+      "value" : "{\"name\":\"Mitsubishi\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Nissan", "Ниссан" ],
+      "value" : "{\"name\":\"Nissan\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Omoda", "Омода" ],
+      "value" : "{\"name\":\"Omoda\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Opel", "Опель" ],
+      "value" : "{\"name\":\"Opel\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Peugeot", "Пежо" ],
+      "value" : "{\"name\":\"Peugeot\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Polestar", "Полестар" ],
+      "value" : "{\"name\":\"Polestar\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Pontiac", "Понтиак" ],
+      "value" : "{\"name\":\"Pontiac\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Porsche", "Порше", "Порш" ],
+      "value" : "{\"name\":\"Porsche\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Ravon", "Равон" ],
+      "value" : "{\"name\":\"Ravon\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Renault", "Рено" ],
+      "value" : "{\"name\":\"Renault\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Rivian", "Ривиан" ],
+      "value" : "{\"name\":\"Rivian\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Rolls-Royce", "Роллс-Ройс" ],
+      "value" : "{\"name\":\"Rolls-Royce\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Rover", "Ровер" ],
+      "value" : "{\"name\":\"Rover\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Saab", "СААБ" ],
+      "value" : "{\"name\":\"Saab\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "SEAT", "СЕАТ" ],
+      "value" : "{\"name\":\"SEAT\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Skoda", "Шкода" ],
+      "value" : "{\"name\":\"Skoda\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Smart", "Смарт" ],
+      "value" : "{\"name\":\"Smart\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Ssangyong", "Ссангёнг", "Сангенг" ],
+      "value" : "{\"name\":\"Ssangyong\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Subaru", "Субару" ],
+      "value" : "{\"name\":\"Subaru\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Suzuki", "Сузуки" ],
+      "value" : "{\"name\":\"Suzuki\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Tagaz", "Тагаз" ],
+      "value" : "{\"name\":\"Tagaz\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Tank", "Танк" ],
+      "value" : "{\"name\":\"Tank\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Tesla", "Тесла" ],
+      "value" : "{\"name\":\"Tesla\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Toyota", "Тойота" ],
+      "value" : "{\"name\":\"Toyota\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Volkswagen", "Фольксваген" ],
+      "value" : "{\"name\":\"Volkswagen\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Volvo", "Вольво" ],
+      "value" : "{\"name\":\"Volvo\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Vortex", "Вортекс" ],
+      "value" : "{\"name\":\"Vortex\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Voyah", "Воя" ],
+      "value" : "{\"name\":\"Voyah\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Wey", "Вей" ],
+      "value" : "{\"name\":\"Wey\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Zeekr", "Зикр" ],
+      "value" : "{\"name\":\"Zeekr\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Zotye", "Зоти" ],
+      "value" : "{\"name\":\"Zotye\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "ВАЗ", "Вазик" ],
+      "value" : "{\"name\":\"ВАЗ\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "ГАЗ", "Газик", "Газель" ],
+      "value" : "{\"name\":\"ГАЗ\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "ЗАЗ", "Запорожец", "Запор" ],
+      "value" : "{\"name\":\"ЗАЗ\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Москвич" ],
+      "value" : "{\"name\":\"Москвич\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "УАЗ", "Уазик" ],
+      "value" : "{\"name\":\"УАЗ\"}"
+    } ]
+  }, {
+    "entity" : {
+      "name" : "model",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Rio", "Рио" ],
+      "value" : "{\"name\":\"Kia Rio\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Ceed", "Сид" ],
+      "value" : "{\"name\":\"Kia Cee'd\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Sportage", "Спортаж" ],
+      "value" : "{\"name\":\"Kia Sportage\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Sorento", "Соренто" ],
+      "value" : "{\"name\":\"Kia Sorento\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Cerato", "Церато" ],
+      "value" : "{\"name\":\"Kia Cerato\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Picanto", "Пиканто" ],
+      "value" : "{\"name\":\"Kia Picanto\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Optima", "Оптима" ],
+      "value" : "{\"name\":\"Kia Optima\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Soul", "Соул" ],
+      "value" : "{\"name\":\"Kia Soul\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "K5", "К5" ],
+      "value" : "{\"name\":\"Kia K5\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Stinger", "Стингер" ],
+      "value" : "{\"name\":\"Kia Stinger\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Duster", "Дастер" ],
+      "value" : "{\"name\":\"Renault Duster\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Logan", "Логан" ],
+      "value" : "{\"name\":\"Renault Logan\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Sandero", "Сандеро" ],
+      "value" : "{\"name\":\"Renault Sandero\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Kaptur", "Каптюр" ],
+      "value" : "{\"name\":\"Renault Kaptur\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Arkana", "Аркана" ],
+      "value" : "{\"name\":\"Renault Arkana\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Megane", "Меган" ],
+      "value" : "{\"name\":\"Renault Megane\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Fluence", "Флюенс" ],
+      "value" : "{\"name\":\"Renault Fluence\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Scenic", "Сценик" ],
+      "value" : "{\"name\":\"Renault Scenic\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Clio", "Клио" ],
+      "value" : "{\"name\":\"Renault Clio\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Espace", "Эспас", "Эспейс" ],
+      "value" : "{\"name\":\"Renault Espace\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Solaris", "Солярис" ],
+      "value" : "{\"name\":\"Hyundai Solaris\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Creta", "Крета" ],
+      "value" : "{\"name\":\"Hyundai Creta\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Tucson", "Туссан" ],
+      "value" : "{\"name\":\"Hyundai Tucson\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Santa Fe", "Санта-Фе" ],
+      "value" : "{\"name\":\"Hyundai Santa Fe\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Sonata", "Соната" ],
+      "value" : "{\"name\":\"Hyundai Sonata\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Elantra", "Элантра" ],
+      "value" : "{\"name\":\"Hyundai Elantra\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Accent", "Акцент" ],
+      "value" : "{\"name\":\"Hyundai Accent\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Palisade", "Палисейд" ],
+      "value" : "{\"name\":\"Hyundai Palisade\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "i30", "и30" ],
+      "value" : "{\"name\":\"Hyundai i30\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Veloster", "Велостер" ],
+      "value" : "{\"name\":\"Hyundai Veloster\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Granta", "Гранта" ],
+      "value" : "{\"name\":\"Lada Granta\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Vesta", "Веста" ],
+      "value" : "{\"name\":\"Lada Vesta\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "XRay", "Икс-Рей" ],
+      "value" : "{\"name\":\"Lada XRay\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Largus", "Ларгус" ],
+      "value" : "{\"name\":\"Lada Largus\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Niva", "Нива" ],
+      "value" : "{\"name\":\"Lada Niva\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Priora", "Приора" ],
+      "value" : "{\"name\":\"Lada Priora\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Kalina", "Калина" ],
+      "value" : "{\"name\":\"Lada Kalina\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Samara", "Самара" ],
+      "value" : "{\"name\":\"Lada Samara\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Camry", "Камри" ],
+      "value" : "{\"name\":\"Toyota Camry\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Corolla", "Королла" ],
+      "value" : "{\"name\":\"Toyota Corolla\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "RAV4", "РАВ4" ],
+      "value" : "{\"name\":\"Toyota RAV4\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Land Cruiser", "Ленд Крузер" ],
+      "value" : "{\"name\":\"Toyota Land Cruiser\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Highlander", "Хайлендер" ],
+      "value" : "{\"name\":\"Toyota Highlander\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "C-HR", "CHR" ],
+      "value" : "{\"name\":\"Toyota C-HR\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Hilux", "Хайлюкс" ],
+      "value" : "{\"name\":\"Toyota Hilux\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Prado", "Прадо" ],
+      "value" : "{\"name\":\"Toyota Prado\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Yaris", "Ярис" ],
+      "value" : "{\"name\":\"Toyota Yaris\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Avalon", "Авалон" ],
+      "value" : "{\"name\":\"Toyota Avalon\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Polo", "Поло" ],
+      "value" : "{\"name\":\"Volkswagen Polo\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Tiguan", "Тигуан" ],
+      "value" : "{\"name\":\"Volkswagen Tiguan\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Passat", "Пассат", "Пасат" ],
+      "value" : "{\"name\":\"Volkswagen Passat\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Touareg", "Туарег" ],
+      "value" : "{\"name\":\"Volkswagen Touareg\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Golf", "Гольф" ],
+      "value" : "{\"name\":\"Volkswagen Golf\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Jetta", "Джетта", "Джета" ],
+      "value" : "{\"name\":\"Volkswagen Jetta\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Arteon", "Артеон" ],
+      "value" : "{\"name\":\"Volkswagen Arteon\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Caddy", "Кадди" ],
+      "value" : "{\"name\":\"Volkswagen Caddy\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Sharan", "Шаран" ],
+      "value" : "{\"name\":\"Volkswagen Sharan\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "T-Cross", "Т-Кросс" ],
+      "value" : "{\"name\":\"Volkswagen T-Cross\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "X-Trail", "Икс-Трейл", "Х-Трейл" ],
+      "value" : "{\"name\":\"Nissan X-Trail\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Qashqai", "Кашкай" ],
+      "value" : "{\"name\":\"Nissan Qashqai\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Murano", "Мурано" ],
+      "value" : "{\"name\":\"Nissan Murano\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Juke", "Джук" ],
+      "value" : "{\"name\":\"Nissan Juke\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Terrano", "Террано" ],
+      "value" : "{\"name\":\"Nissan Terrano\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Almera", "Альмера" ],
+      "value" : "{\"name\":\"Nissan Almera\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Teana", "Теана" ],
+      "value" : "{\"name\":\"Nissan Teana\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Patrol", "Патрол" ],
+      "value" : "{\"name\":\"Nissan Patrol\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Camaro", "Камаро" ],
+      "value" : "{\"name\":\"Chevrolet Camaro\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Tahoe", "Тахо" ],
+      "value" : "{\"name\":\"Chevrolet Tahoe\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Impala", "Импала" ],
+      "value" : "{\"name\":\"Chevrolet Impala\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Malibu", "Малибу" ],
+      "value" : "{\"name\":\"Chevrolet Malibu\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Trailblazer", "Трейлблейзер" ],
+      "value" : "{\"name\":\"Chevrolet Trailblazer\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Spark", "Спарк" ],
+      "value" : "{\"name\":\"Chevrolet Spark\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Cruze", "Круз" ],
+      "value" : "{\"name\":\"Chevrolet Cruze\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Suburban", "Сабурбан", "Субурбан" ],
+      "value" : "{\"name\":\"Chevrolet Suburban\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Equinox", "Эквинокс" ],
+      "value" : "{\"name\":\"Chevrolet Equinox\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Blazer", "Блейзер", "Блэйзер" ],
+      "value" : "{\"name\":\"Chevrolet Blazer\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Civic", "Сивик", "Цивик" ],
+      "value" : "{\"name\":\"Honda Civic\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Accord", "Аккорд" ],
+      "value" : "{\"name\":\"Honda Accord\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "CR-V", "CRV" ],
+      "value" : "{\"name\":\"Honda CR-V\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Pilot", "Пилот" ],
+      "value" : "{\"name\":\"Honda Pilot\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "HR-V", "HRV" ],
+      "value" : "{\"name\":\"Honda HR-V\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Odyssey", "Одиссей" ],
+      "value" : "{\"name\":\"Honda Odyssey\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Passport", "Паспорт" ],
+      "value" : "{\"name\":\"Honda Passport\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Insight", "Инсайт" ],
+      "value" : "{\"name\":\"Honda Insight\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Fit", "Фит" ],
+      "value" : "{\"name\":\"Honda Fit\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Prelude", "Прелюд", "Прелюдия" ],
+      "value" : "{\"name\":\"Honda Prelude\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "A-Class", "А-Класс" ],
+      "value" : "{\"name\":\"Mercedes-Benz A-Class\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "C-Class", "C-Класс" ],
+      "value" : "{\"name\":\"Mercedes-Benz C-Class\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "E-Class", "Е-Класс" ],
+      "value" : "{\"name\":\"Mercedes-Benz E-Class\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "G-Class", "G-Wagen", "Гелентваген", "Гелик" ],
+      "value" : "{\"name\":\"Mercedes-Benz G-Class\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "S-Class", "S-Класс" ],
+      "value" : "{\"name\":\"Mercedes-Benz S-Class\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "AMG GT" ],
+      "value" : "{\"name\":\"Mercedes-Benz AMG GT\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Kompressor", "Компрессор" ],
+      "value" : "{\"name\":\"Mercedes-Benz Kompressor\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Evolution", "EVO", "Эволюшн", "Эволюшион" ],
+      "value" : "{\"name\":\"Mitsubishi Lancer Evo\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Outlander", "Аутлендер" ],
+      "value" : "{\"name\":\"Mitsubishi Outlander\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Pajero", "Паджеро" ],
+      "value" : "{\"name\":\"Mitsubishi Pajero\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Lancer", "Лансер" ],
+      "value" : "{\"name\":\"Mitsubishi Lancer\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "ASX", "АСХ" ],
+      "value" : "{\"name\":\"Mitsubishi ASX\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Eclipse Cross", "Эклипс Кросс", "Эклипс" ],
+      "value" : "{\"name\":\"Mitsubishi Eclipse Cross\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Mirage", "Мираж" ],
+      "value" : "{\"name\":\"Mitsubishi Mirage\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Montero", "Монтеро" ],
+      "value" : "{\"name\":\"Mitsubishi Montero\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Triton", "Тритон" ],
+      "value" : "{\"name\":\"Mitsubishi Triton\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Delica", "Делика" ],
+      "value" : "{\"name\":\"Mitsubishi Delica\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Galant", "Галант" ],
+      "value" : "{\"name\":\"Mitsubishi Galant\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Forester", "Форестер" ],
+      "value" : "{\"name\":\"Subaru Forester\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Outback", "Аутбэк" ],
+      "value" : "{\"name\":\"Subaru Outback\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Impreza", "Импреза" ],
+      "value" : "{\"name\":\"Subaru Impreza\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "WRX" ],
+      "value" : "{\"name\":\"Subaru WRX\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Legacy", "Легаси" ],
+      "value" : "{\"name\":\"Subaru Legacy\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Crosstrek", "Кросстрек" ],
+      "value" : "{\"name\":\"Subaru Crosstrek\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Ascent", "Асцент" ],
+      "value" : "{\"name\":\"Subaru Ascent\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Tiggo", "Тигго" ],
+      "value" : "{\"name\":\"Chery Tiggo\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Arrizo", "Аризо" ],
+      "value" : "{\"name\":\"Chery Arrizo\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Jolion", "Джолион" ],
+      "value" : "{\"name\":\"Haval Jolion\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "H6" ],
+      "value" : "{\"name\":\"Haval H6\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Dargo", "Дарго" ],
+      "value" : "{\"name\":\"Haval Dargo\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "M6", "М6" ],
+      "value" : "{\"name\":\"Haval M6\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Duster", "Дастер" ],
+      "value" : "{\"name\":\"Renault Duster\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "5008" ],
+      "value" : "{\"name\":\"Peugeot 5008\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "208" ],
+      "value" : "{\"name\":\"Peugeot 208\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "3008" ],
+      "value" : "{\"name\":\"Peugeot 3008\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "508" ],
+      "value" : "{\"name\":\"Peugeot 508\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "2008" ],
+      "value" : "{\"name\":\"Peugeot 2008\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "X5", "Х5" ],
+      "value" : "{\"name\":\"BMW X5\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "X3", "Х3" ],
+      "value" : "{\"name\":\"BMW X3\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "X6", "Х6" ],
+      "value" : "{\"name\":\"BMW X6\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "3 Series", "Тройка" ],
+      "value" : "{\"name\":\"BMW 3 Series\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "5 Series", "Пятерка" ],
+      "value" : "{\"name\":\"BMW 5 Series\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "7 Series", "Семерка" ],
+      "value" : "{\"name\":\"BMW 7 Series\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Z4" ],
+      "value" : "{\"name\":\"BMW Z4\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "M3", "М3" ],
+      "value" : "{\"name\":\"BMW M3\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "M4", "М4" ],
+      "value" : "{\"name\":\"BMW M4\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Kuga", "Куга" ],
+      "value" : "{\"name\":\"Ford Kuga\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Focus", "Фокус" ],
+      "value" : "{\"name\":\"Ford Focus\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Mondeo", "Мондео" ],
+      "value" : "{\"name\":\"Ford Mondeo\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Explorer", "Эксплорер" ],
+      "value" : "{\"name\":\"Ford Explorer\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Fiesta", "Фиеста" ],
+      "value" : "{\"name\":\"Ford Fiesta\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Puma", "Пума" ],
+      "value" : "{\"name\":\"Ford Puma\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Mustang", "Мустанг" ],
+      "value" : "{\"name\":\"Ford Mustang\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Edge", "Эдж", "Эйдж" ],
+      "value" : "{\"name\":\"Ford Edge\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Ranger", "Рейнджер" ],
+      "value" : "{\"name\":\"Ford Ranger\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "F-150", "F150" ],
+      "value" : "{\"name\":\"Ford F-150\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Bronco", "Бронко" ],
+      "value" : "{\"name\":\"Ford Bronco\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Cayman", "Кайман" ],
+      "value" : "{\"name\":\"Porsche 718 Cayman\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Cayenne", "Кайен", "Каен" ],
+      "value" : "{\"name\":\"Porsche Cayenne\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Macan", "Макан" ],
+      "value" : "{\"name\":\"Porsche Macan\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Panamera", "Панамера" ],
+      "value" : "{\"name\":\"Porsche Panamera\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Taycan", "Тайкан" ],
+      "value" : "{\"name\":\"Porsche Taycan\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Boxster", "Бокстер" ],
+      "value" : "{\"name\":\"Porsche 718 Boxster\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Tacuma", "Такума" ],
+      "value" : "{\"name\":\"Daewoo Tacuma\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Matiz", "Матиз", "Матис" ],
+      "value" : "{\"name\":\"Daewoo Matiz\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Nexia", "Нексия" ],
+      "value" : "{\"name\":\"Daewoo Nexia\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Lanos", "Ланос" ],
+      "value" : "{\"name\":\"Daewoo Lanos\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Evanda", "Эванда" ],
+      "value" : "{\"name\":\"Daewoo Evanda\"}"
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Leganza", "Леганза" ],
+      "value" : "{\"name\":\"Daewoo Leganza\"}"
+    } ]
+  } ],
+  "enabledSystemEntities" : [ "pymorphy.name", "pymorphy.surn", "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
+  "spellerDictionary" : [ ],
+  "systemEntities" : [ {
+    "name" : "mystem.geo",
+    "enabled" : false
+  }, {
+    "name" : "mystem.persn",
+    "enabled" : false
+  }, {
+    "name" : "mystem.obsc",
+    "enabled" : false
+  }, {
+    "name" : "mystem.patrn",
+    "enabled" : false
+  }, {
+    "name" : "mystem.famn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.romn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.latn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.numb",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.intg",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.abbr",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.name",
+    "enabled" : true
+  }, {
+    "name" : "pymorphy.surn",
+    "enabled" : true
+  }, {
+    "name" : "pymorphy.patr",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.geox",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.orgn",
+    "enabled" : false
+  }, {
+    "name" : "duckling.number",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.ordinal",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.amount-of-money",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.distance",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.time",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.date",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.time-of-day",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.duration",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.phone-number",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.email",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.url",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.interval",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "mlps-obscene.obscene",
+    "enabled" : false
+  }, {
+    "name" : "zb.datetime",
+    "enabled" : false
+  }, {
+    "name" : "zb.number",
+    "enabled" : false
+  } ],
+  "faq" : [ {
+    "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Сколько стоит ТО",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Стоимость обслуживания можно рассчитать <a href=\"http://someautodealer/techservice#calculate\" target=\"_blank\">на нашем сайте</a>.",
+      "markup" : "html",
+      "key" : "_yzgbdbkyc"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ. Техосмотр",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Конфликтная ситуация",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Сожалею, что так вышло. <a href=\"http://someautodealer/contacts\" target=\"_blank\">Позвоните моим коллегам</a>, чтобы разобраться в ситуации.",
+      "markup" : "html",
+      "key" : "_o8zap7zvw"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Когда ехать на ТО",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "График технического обслуживания можно узнать <a href=\"http://someautodealer/techservice\" target=\"_blank\">на этой странице</a>.",
+      "markup" : "html",
+      "key" : "_w1kui6kb6"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ. Техосмотр/Root/Зачем нужно ТО",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "",
+      "markup" : "plain"
+    } ]
+  } ],
+  "skills" : [ ]
 }
