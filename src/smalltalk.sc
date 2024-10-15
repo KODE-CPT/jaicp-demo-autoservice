@@ -1,23 +1,23 @@
 theme: /smalltalk.sc
     
     state: Hello
-        intent!: /привет
+        q!: $Hello
         a: Привет! Как дела?
 
         state: AnswerGood
-            intent: /хорошо
+            q: $Good
             a: Это отлично! Чем я могу помочь?
             
         state: AnswerBad
-            intent: /плохо
+            q: $Bad
             a: Ужас! Могу ли я чем-то помочь?
                 
     state: Bye
-        intent!: /пока
+        q!: $Bye
         a: Всего доброго и удачи на дорогах!
 
     state: WhoAreYou
-        intent!: /кто ты
+        q!: $WhoAreYou
         a: Меня зовут Вася. А вас?
         
         state: Answer

@@ -1,0 +1,157 @@
+1; Rio, Рио; {"name": "Kia Rio"}
+2; Ceed, Сид; {"name": "Kia Cee'd"}
+3; Sportage, Спортаж; {"name": "Kia Sportage"}
+4; Sorento, Соренто; {"name": "Kia Sorento"}
+5; Cerato, Церато; {"name": "Kia Cerato"}
+6; Picanto, Пиканто; {"name": "Kia Picanto"}
+7; Optima, Оптима; {"name": "Kia Optima"}
+8; Soul, Соул; {"name": "Kia Soul"}
+9; K5, К5; {"name": "Kia K5"}
+10; Stinger, Стингер; {"name": "Kia Stinger"}
+11; Duster, Дастер; {"name": "Renault Duster"}
+12; Logan, Логан; {"name": "Renault Logan"}
+13; Sandero, Сандеро; {"name": "Renault Sandero"}
+14; Kaptur, Каптюр; {"name": "Renault Kaptur"}
+15; Arkana, Аркана; {"name": "Renault Arkana"}
+16; Megane, Меган; {"name": "Renault Megane"}
+17; Fluence, Флюенс; {"name": "Renault Fluence"}
+18; Scenic, Сценик; {"name": "Renault Scenic"}
+19; Clio, Клио; {"name": "Renault Clio"}
+20; Espace, Эспас, Эспейс; {"name": "Renault Espace"}
+21; Solaris, Солярис; {"name": "Hyundai Solaris"}
+22; Creta, Крета; {"name": "Hyundai Creta"}
+23; Tucson, Туссан; {"name": "Hyundai Tucson"}
+24; Santa Fe, Санта-Фе; {"name": "Hyundai Santa Fe"}
+25; Sonata, Соната; {"name": "Hyundai Sonata"}
+26; Elantra, Элантра; {"name": "Hyundai Elantra"}
+27; Accent, Акцент; {"name": "Hyundai Accent"}
+28; Palisade, Палисейд; {"name": "Hyundai Palisade"}
+29; i30, i30; {"name": "Hyundai i30"}
+30; Veloster, Велостер; {"name": "Hyundai Veloster"}
+31; Granta, Гранта; {"name": "Lada Granta"}
+32; Vesta, Веста; {"name": "Lada Vesta"}
+33; XRay, Икс-Рей; {"name": "Lada XRay"}
+34; Largus, Ларгус; {"name": "Lada Largus"}
+35; Niva, Нива; {"name": "Lada Niva"}
+36; Priora, Приора; {"name": "Lada Priora"}
+37; Kalina, Калина; {"name": "Lada Kalina"}
+38; Samara, Самара; {"name": "Lada Samara"}
+41; Camry, Камри; {"name": "Toyota Camry"}
+42; Corolla, Королла, Корола; {"name": "Toyota Corolla"}
+43; RAV4, РАВ4; {"name": "Toyota RAV4"}
+44; Land Cruiser, Ленд Крузер; {"name": "Toyota Land Cruiser"}
+45; Highlander, Хайлендер; {"name": "Toyota Highlander"}
+46; C-HR, CHR; {"name": "Toyota C-HR"}
+47; Hilux, Хайлюкс; {"name": "Toyota Hilux"}
+48; Prado, Прадо; {"name": "Toyota Prado"}
+49; Yaris, Ярис; {"name": "Toyota Yaris"}
+50; Avalon, Авалон; {"name": "Toyota Avalon"}
+51; Polo, Поло; {"name": "Volkswagen Polo"}
+52; Tiguan, Тигуан; {"name": "Volkswagen Tiguan"}
+53; Passat, Пассат, Пасат; {"name": "Volkswagen Passat"}
+54; Touareg, Туарег; {"name": "Volkswagen Touareg"}
+55; Golf, Гольф; {"name": "Volkswagen Golf"}
+56; Jetta, Джетта, Джета; {"name": "Volkswagen Jetta"}
+57; Arteon, Артеон; {"name": "Volkswagen Arteon"}
+58; Caddy, Кадди; {"name": "Volkswagen Caddy"}
+59; Sharan, Шаран; {"name": "Volkswagen Sharan"}
+60; T-Cross, Т-Кросс; {"name": "Volkswagen T-Cross"}
+61; X-Trail, Икс-Трейл, Х-Трейл; {"name": "Nissan X-Trail"}
+62; Qashqai, Кашкай; {"name": "Nissan Qashqai"}
+63; Murano, Мурано; {"name": "Nissan Murano"}
+64; Juke, Джук; {"name": "Nissan Juke"}
+65; Terrano, Террано; {"name": "Nissan Terrano"}
+66; Almera, Альмера; {"name": "Nissan Almera"}
+67; Teana, Теана; {"name": "Nissan Teana"}
+68; Patrol, Патрол; {"name": "Nissan Patrol"}
+71; Camaro, Камаро; {"name": "Chevrolet Camaro"}
+72; Tahoe, Тахо; {"name": "Chevrolet Tahoe"}
+73; Impala, Импала; {"name": "Chevrolet Impala"}
+74; Malibu, Малибу; {"name": "Chevrolet Malibu"}
+75; Trailblazer, Трейлблейзер; {"name": "Chevrolet Trailblazer"}
+76; Spark, Спарк; {"name": "Chevrolet Spark"}
+77; Cruze, Круз; {"name": "Chevrolet Cruze"}
+78; Suburban, Сабурбан, Субурбан; {"name": "Chevrolet Suburban"}
+79; Equinox, Эквинокс; {"name": "Chevrolet Equinox"}
+80; Blazer, Блейзер, Блэйзер; {"name": "Chevrolet Blazer"}
+81; Civic, Сивик, Цивик; {"name": "Honda Civic"}
+82; Accord, Аккорд; {"name": "Honda Accord"}
+83; CR-V, CRV; {"name": "Honda CR-V"}
+84; Pilot, Пилот; {"name": "Honda Pilot"}
+85; HR-V, HRV; {"name": "Honda HR-V"}
+86; Odyssey, Одиссей; {"name": "Honda Odyssey"}
+87; Passport, Паспорт; {"name": "Honda Passport"}
+88; Insight, Инсайт; {"name": "Honda Insight"}
+89; Fit, Фит; {"name": "Honda Fit"}
+90; Prelude, Прелюд, Прелюдия; {"name": "Honda Prelude"}
+91; A-Class, А-Класс; {"name": "Mercedes-Benz A-Class"}
+92; C-Class, C-Класс; {"name": "Mercedes-Benz C-Class"}
+93; E-Class, Е-Класс; {"name": "Mercedes-Benz E-Class"}
+94; G-Class, G-Wagen, Гелентваген, Гелинтваген, Гелик; {"name": "Mercedes-Benz G-Class"}
+95; S-Class, S-Класс; {"name": "Mercedes-Benz S-Class"}
+96; AMG GT; {"name": "Mercedes-Benz AMG GT"}
+97; Kompressor, Компрессор; {"name": "Mercedes-Benz Kompressor"}
+98; Evolution, EVO, Эволюшн, Эволюшион; {"name": "Mitsubishi Lancer Evo"}
+99; Outlander, Аутлендер; {"name": "Mitsubishi Outlander"}
+100; Pajero, Паджеро; {"name": "Mitsubishi Pajero"}
+101; Lancer, Лансер; {"name": "Mitsubishi Lancer"}
+102; ASX, АСХ; {"name": "Mitsubishi ASX"}
+103; Eclipse Cross, Эклипс Кросс, Эклипс; {"name": "Mitsubishi Eclipse Cross"}
+104; Mirage, Мираж; {"name": "Mitsubishi Mirage"}
+105; Montero, Монтеро; {"name": "Mitsubishi Montero"}
+106; Triton, Тритон; {"name": "Mitsubishi Triton"}
+107; Delica, Делика; {"name": "Mitsubishi Delica"}
+108; Galant, Галант; {"name": "Mitsubishi Galant"}
+109; Forester, Форестер; {"name": "Subaru Forester"}
+110; Outback, Аутбэк; {"name": "Subaru Outback"}
+111; Impreza, Импреза; {"name": "Subaru Impreza"}
+112; WRX; {"name": "Subaru WRX"}
+113; Legacy, Легаси; {"name": "Subaru Legacy"}
+114; Crosstrek, Кросстрек; {"name": "Subaru Crosstrek"}
+115; Ascent, Асцент; {"name": "Subaru Ascent"}
+116; Tiggo, Тигго; {"name": "Chery Tiggo"}
+117; Arrizo, Аризо; {"name": "Chery Arrizo"}
+118; Jolion, Джолион; {"name": "Haval Jolion"}
+119; H6; {"name": "Haval H6"}
+120; Dargo, Дарго; {"name": "Haval Dargo"}
+121; M6, М6; {"name": "Haval M6"}
+122; 3008; {"name": "Peugeot 3008"}
+123; 508; {"name": "Peugeot 508"}
+124; Duster, Дастер; {"name": "Renault Duster"}
+125; 5008; {"name": "Peugeot 5008"}
+126; 208; {"name": "Peugeot 208"}
+127; 3008; {"name": "Peugeot 3008"}
+128; 508; {"name": "Peugeot 508"}
+129; 2008; {"name": "Peugeot 2008"}
+130; X5, Х5; {"name": "BMW X5"}
+131; X3, Х3; {"name": "BMW X3"}
+132; X6, Х6; {"name": "BMW X6"}
+133; 3 Series, Тройка; {"name": "BMW 3 Series"}
+134; 5 Series, Пятерка; {"name": "BMW 5 Series"}
+135; 7 Series, Семерка; {"name": "BMW 7 Series"}
+136; Z4; {"name": "BMW Z4"}
+137; M3, М3; {"name": "BMW M3"}
+138; M4, М4; {"name": "BMW M4"}
+139; Kuga, Куга; {"name": "Ford Kuga"}
+140; Focus, Фокус; {"name": "Ford Focus"}
+141; Mondeo, Мондео; {"name": "Ford Mondeo"}
+142; Explorer, Эксплорер; {"name": "Ford Explorer"}
+143; Fiesta, Фиеста; {"name": "Ford Fiesta"}
+144; Puma, Пума; {"name": "Ford Puma"}
+145; Mustang, Мустанг; {"name": "Ford Mustang"}
+146; Edge, Эдж, Эйдж; {"name": "Ford Edge"}
+147; Ranger, Рейнджер; {"name": "Ford Ranger"}
+148; F-150, F150; {"name": "Ford F-150"}
+149; Bronco, Бронко; {"name": "Ford Bronco"}
+150; Cayman, Кайман; {"name": "Porsche 718 Cayman"}
+151; Cayenne, Кайен, Каен; {"name": "Porsche Cayenne"}
+152; Macan, Макан; {"name": "Porsche Macan"}
+153; Panamera, Панамера; {"name": "Porsche Panamera"}
+154; Taycan, Тайкан; {"name": "Porsche Taycan"}
+155; Boxster, Бокстер; {"name": "Porsche 718 Boxster"}
+156; Tacuma, Такума; {"name": "Daewoo Tacuma"}
+157; Matiz, Матиз, Матис; {"name": "Daewoo Matiz"}
+158; Nexia, Нексия; {"name": "Daewoo Nexia"}
+159; Lanos, Ланос; {"name": "Daewoo Lanos"}
+160; Evanda, Эванда; {"name": "Daewoo Evanda"}
+161; Leganza, Леганза; {"name": "Daewoo Leganza"}

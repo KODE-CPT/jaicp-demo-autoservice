@@ -1,16 +1,17 @@
-theme: /appointment
+theme: /service
 
     state: Start
-        intent!: /записаться на ТО
+        q!: $GoToService
         script:
             $session.clientName = getRenderName($parseTree._Name, $parseTree._SurName);
             $session.phone = $parseTree._Phone;
             if ($parseTree._Model) {$session.car = $parseTree._Model.name}
             else if ($parseTree._Brand) {$session.car = $parseTree._Brand.name}
+        a: Хорошо
         go!: ../New
         
     state: New
-        a: Хорошо. Давайте составим заявку на техобслуживание.
+        a: Давайте составим заявку на техобслуживание.
         go!: ./Name
         
         state: Name
@@ -23,9 +24,7 @@ theme: /appointment
                 go: ../Answer
                 
             state: Answer
-                q: * {$Name $SurName} *
-                q: * $Name *
-                q: * $SurName *
+                q: $SendName
                 script: $session.clientName = getRenderName($parseTree._Name, $parseTree._SurName)
                 go!: ../../Phone
 
@@ -45,7 +44,7 @@ theme: /appointment
                 go: ../Answer
                 
             state: Answer
-                q: * $Phone *
+                q: $SendPhone
                 script: $session.phone = $parseTree._Phone
                 go!: ../../Car
                     
@@ -56,7 +55,7 @@ theme: /appointment
                     "Напишите мне в Телеграм" -> ../useTelegram
         
             state: useTelegram
-                q: * (телеграм/telegram) *
+                q: $UseTelegram
                 script: 
                     $session.useTelegram = true
                     $session.telegram = "telegramUser"  // Заглушка для прохождения автотестов
@@ -73,9 +72,7 @@ theme: /appointment
                 go: ../Answer
                 
             state: Answer 
-                q: * $Model *
-                q: * $Brand *
-                q: *
+                q: $SendCar
                 
                 # Проверяем ввод пользователя по справочнику моделей и марок. Если нет совпадений - заносим то, что указал пользователь
                 script: 

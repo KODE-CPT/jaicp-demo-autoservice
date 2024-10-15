@@ -1,0 +1,105 @@
+1; Acura, Акура; {"name": "Acura"}
+2; Alfa Romeo, Альфа Ромео; {"name": "Alfa Romeo"}
+3; Aston Martin, Астон Мартин; {"name": "Aston Martin"}
+4; Audi, Ауди; {"name": "Audi"}
+5; Avatr, Аватар; {"name": "Avatr"}
+6; Baic, Бэйк; {"name": "Baic"}
+7; Belgeee, Белджи, Белжи; {"name": "Belgeee"}
+8; Bentley, Бентли; {"name": "Bentley"}
+9; BMW, БМВ, Бэха; {"name": "BMW"}
+10; Brilliance, Бриллианс; {"name": "Brilliance"}
+11; Bugatti, Бугатти, Бугати; {"name": "Bugatti"}
+12; Buick, Бьюик; {"name": "Buick"}
+13; Byd, БИД; {"name": "Byd"}
+14; Cadillac, Кадиллак, Кадилак; {"name": "Cadillac"}
+15; Changan, Чанган; {"name": "Changan"}
+16; Chery, Чери; {"name": "Chery"}
+17; Chevrolet, Шевроле; {"name": "Chevrolet"}
+18; Chrysler, Крайслер; {"name": "Chrysler"}
+19; Citroen, Ситроен; {"name": "Citroen"}
+20; Dacia, Дачия; {"name": "Dacia"}
+21; Daewoo, Дэу; {"name": "Daewoo"}
+22; Daihatsu, Дайхатсу; {"name": "Daihatsu"}
+23; Datsun, Датсун; {"name": "Datsun"}
+24; Dodge, Додж; {"name": "Dodge"}
+25; Dongfeng, Дунфэн; {"name": "Dongfeng"}
+26; EVOLUTE i-PRO, Эволют; {"name": "EVOLUTE i-PRO"}
+27; Exeed, Эксид; {"name": "Exeed"}
+28; Faw, Фав; {"name": "Faw"}
+29; Ferrari, Феррари; {"name": "Ferrari"}
+30; Fiat, Фиат; {"name": "Fiat"}
+31; Ford, Форд; {"name": "Ford"}
+32; GAC, ГАК; {"name": "GAC"}
+33; Geely, Джили; {"name": "Geely"}
+34; Genesis, Генезис; {"name": "Genesis"}
+35; GMC, ДжиЭмСи; {"name": "GMC"}
+36; Great Wall, Грейт Волл; {"name": "Great Wall"}
+37; Haima, Хайма; {"name": "Haima"}
+38; Haval, Хавейл; {"name": "Haval"}
+39; Honda, Хонда; {"name": "Honda"}
+40; Hongqi, Хунци; {"name": "Hongqi"}
+41; Hummer, Хаммер; {"name": "Hummer"}
+42; Hyundai, Хендай; {"name": "Hyundai"}
+43; Infiniti, Инфинити; {"name": "Infiniti"}
+44; Isuzu, Исузу; {"name": "Isuzu"}
+45; JAC, Жак; {"name": "JAC"}
+46; Jaecoo, Джека; {"name": "Jaecoo"}
+47; Jaguar, Ягуар; {"name": "Jaguar"}
+48; Jeep, Джип; {"name": "Jeep"}
+49; Jetour, Джетур; {"name": "Jetour"}
+50; Kaiyi, Каи; {"name": "Kaiyi"}
+51; Kia, Киа; {"name": "Kia"}
+52; Lamborghini, Ламборгини; {"name": "Lamborghini"}
+53; Lancia, Лянча; {"name": "Lancia"}
+54; Land Rover, Ленд Ровер; {"name": "Land Rover"}
+55; Leapmotor, Липмотор; {"name": "Leapmotor"}
+56; Lexus, Лексус; {"name": "Lexus"}
+57; Lifan, Лифан; {"name": "Lifan"}
+58; Lincoln, Линкольн; {"name": "Lincoln"}
+59; LiXiang, ЛиСян; {"name": "LiXiang"}
+60; Lotus, Лотус; {"name": "Lotus"}
+61; Lynk & Co, Линк & Ко; {"name": "Lynk & Co"}
+62; MAN, МАН; {"name": "MAN"}
+63; Marussia, Маруссия, Маруся; {"name": "Marussia"}
+64; Maserati, Мазерати; {"name": "Maserati"}
+65; Maybach, Майбах; {"name": "Maybach"}
+66; Mazda, Мазда; {"name": "Mazda"}
+67; McLaren, Макларен; {"name": "McLaren"}
+68; Mercedes, Мерседес, Мерседесс, Мэрс, Мерс; {"name": "Mercedes"}
+69; Mini, Мини; {"name": "Mini"}
+70; Mitsubishi, Митсубиси; {"name": "Mitsubishi"}
+71; Nissan, Ниссан, Нисан; {"name": "Nissan"}
+72; Omoda, Омода; {"name": "Omoda"}
+73; Opel, Опель; {"name": "Opel"}
+74; Peugeot, Пежо; {"name": "Peugeot"}
+75; Polestar, Полестар; {"name": "Polestar"}
+76; Pontiac, Понтиак; {"name": "Pontiac"}
+77; Porsche, Порше, Порш; {"name": "Porsche"}
+78; Ravon, Равон; {"name": "Ravon"}
+79; Renault, Рено; {"name": "Renault"}
+80; Rivian, Ривиан; {"name": "Rivian"}
+81; Rolls-Royce, Роллс-Ройс; {"name": "Rolls-Royce"}
+82; Rover, Ровер; {"name": "Rover"}
+83; Saab, СААБ; {"name": "Saab"}
+84; SEAT, СЕАТ; {"name": "SEAT"}
+85; Skoda, Шкода; {"name": "Skoda"}
+86; Smart, Смарт; {"name": "Smart"}
+87; Ssangyong, Ссангёнг, Сангенг; {"name": "Ssangyong"}
+88; Subaru, Субару; {"name": "Subaru"}
+89; Suzuki, Сузуки; {"name": "Suzuki"}
+90; Tagaz, Тагаз; {"name": "Tagaz"}
+91; Tank, Танк; {"name": "Tank"}
+92; Tesla, Тесла; {"name": "Tesla"}
+93; Toyota, Тойота; {"name": "Toyota"}
+94; Volkswagen, Фольксваген; {"name": "Volkswagen"}
+95; Volvo, Вольво; {"name": "Volvo"}
+96; Vortex, Вортекс; {"name": "Vortex"}
+97; Voyah, Воя; {"name": "Voyah"}
+98; Wey, Вей; {"name": "Wey"}
+99; Zeekr, Зикр; {"name": "Zeekr"}
+100; Zotye, Зоти; {"name": "Zotye"}
+101; ВАЗ, Вазик; {"name": "ВАЗ"}
+102; ГАЗ, Газик; {"name": "ГАЗ"}
+103; ЗАЗ, Запорожец, Запор; {"name": "ЗАЗ"}
+104; Москвич; {"name": "Москвич"}
+105; УАЗ, Уазик; {"name": "УАЗ"}

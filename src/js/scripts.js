@@ -1,5 +1,15 @@
+// КОНВЕРТЕРЫ ------------------------------------------------------------------
+function brandConverter(parseTree) {
+        var id = parseTree.Brands[0].value;
+        return Brands[id].value;
+    }
+    
+function modelConverter(parseTree) {
+        var id = parseTree.Models[0].value;
+        return Models[id].value;
+    }
 
-// Преобразуем имя и фамилию
+// РЕНДЕР ИМЕНИ ----------------------------------------------------------------
 function getRenderName(surName, name) {
   // Справочник названий авто, распознаваемых как имя
     var namesLikeCars = [ 
@@ -25,7 +35,7 @@ function getRenderName(surName, name) {
 }
 
 
-// Чистим строку с названием неизвестного авто от заведомо мусорных слов
+// ОЧИСТКА СТРОКИ ОТ МУСОРА ----------------------------------------------------
 function removePhrasesForUnknownCar(str) {
   var phrasesToRemove = [
       'у меня', 'у нас'

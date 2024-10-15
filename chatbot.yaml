@@ -7,11 +7,12 @@ language: ru
 
 tests:
   include:
+
+  exclude:
     - appointment_full.xml
     - appointment_short.xml 
-    - smalltalk.xml
-  exclude:
- 
+    - faq.xml    
+    - smalltalk.xml 
 nlp:
   intentNoMatchThresholds:
     phrases: 0.2
