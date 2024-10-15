@@ -59,7 +59,7 @@ theme: /service
                 script: 
                     $session.useTelegram = true
                     $session.telegram = "telegramUser"  // Заглушка для прохождения автотестов
-                a: Хорошо
+                a: ОК
                 go!: ../../Car
         
         state: Car
