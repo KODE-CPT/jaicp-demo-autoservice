@@ -16,7 +16,7 @@ theme: /main
         a: Здравствуйте! Чем могу помочь?
         buttons:
             "Записаться на ТО" -> /appointment/Start
-            "FAQ" -> /FAQ/Main
+            "FAQ" -> /faq/Main
    
     state: NoMatch
         event!: noMatch
