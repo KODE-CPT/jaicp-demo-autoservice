@@ -1,5 +1,6 @@
 require: appointment.sc
 require: smalltalk.sc
+require: faq.sc
 require: patterns.sc
 
 require: js/scripts.js
