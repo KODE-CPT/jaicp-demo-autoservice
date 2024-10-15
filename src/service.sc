@@ -11,7 +11,7 @@ theme: /service
         go!: ../New
         
     state: New
-        a: Давайте составим заявку на техобслуживание.
+        #a: Давайте составим заявку на техобслуживание.
         go!: ./Name
         
         state: Name
@@ -20,7 +20,7 @@ theme: /service
             go!: ./Question
                 
             state: Question
-                a: Как вас зовут?
+                a: Давайте составим заявку на техобслуживание. Как вас зовут?
                 go: ../Answer
                 
             state: Answer
