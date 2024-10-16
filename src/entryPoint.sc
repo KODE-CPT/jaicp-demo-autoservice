@@ -1,6 +1,10 @@
-# Паттерны, синонимы, скрипты
+# Запросные строки
 require: patterns/intents.sc
+
+# Паттерны и синонимы
 require: patterns/patterns.sc
+
+# Скрипты, конвертеры
 require: js/scripts.js
 
 # Запросные стейты

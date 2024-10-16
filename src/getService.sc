@@ -28,8 +28,6 @@ theme: /getService
         state: noMatch 
             event: noMatch 
             go!: /getService_a/phone/reaction/noMatch    
-
- 
         
     state: car 
         state: sendCar

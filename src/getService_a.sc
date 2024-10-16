@@ -50,7 +50,7 @@ theme: /getService_a
                 go!: /getService_a/car
                         
             state: noMatch 
-                a: Не похоже на номер телефона. Напишите его полностью.
+                a: Не похоже на номер телефона. Напишите его в формате 8 XXX XXX-XX-XX.
                 go: /getService/phone/sendPhone   
 
 
