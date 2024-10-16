@@ -41,7 +41,7 @@ theme: /getService_a
         state: question
             a: Напишите ваш номер телефона. Мы позвоним на него, чтобы согласовать время.
             buttons: 
-                "Напишите мне в Телеграм" -> /getService/telegram/sendTelegram
+                "Напишите мне в Телеграм" -> /getService/phone/sendTelegram
             go: /getService/phone/sendPhone
         
         state: reaction    

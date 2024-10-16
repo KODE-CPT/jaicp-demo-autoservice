@@ -20,15 +20,16 @@ theme: /getService
         state: sendPhone
             q: $SendPhone
             go!: /getService_a/phone/reaction/correct
+        
+        state: sendTelegram
+            q: $UseTelegram
+            go!: /getService_a/telegram/reaction/correct 
             
         state: noMatch 
             event: noMatch 
             go!: /getService_a/phone/reaction/noMatch    
 
-    state: telegram 
-        state: sendTelegram
-            q: $UseTelegram
-            go!: /getService_a/telegram/reaction/correct  
+ 
         
     state: car 
         state: sendCar
