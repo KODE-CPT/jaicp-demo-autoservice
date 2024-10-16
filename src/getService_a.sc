@@ -14,7 +14,7 @@ theme: /getService_a
 # ЗАПРОС ИМЕНИ ----------------------------------------------------------------- 
     state: name
         if: $session.clientName  // Если параметр сохранен из стартового запроса, переходим к следующему вопросу.
-            go!: /getService/phone
+            go!: /getService_a/phone
         go!: /getService_a/name/question
             
         state: question  
