@@ -23,8 +23,4 @@ require: csv/brands.csv
 require: csv/models.csv
     name = Models
     var = Models
-
-# Подключаемые модули   
-require: slotfilling/slotFilling.sc
-  module = sys.zb-common
   
