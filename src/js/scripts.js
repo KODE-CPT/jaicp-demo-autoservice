@@ -1,3 +1,14 @@
+// ОЧИСТКА ЗАПРОСА ОТ МУСОРНЫХ СИМВОЛОВ ----------------------------------------
+bind("preMatch", function($context) {
+    // Обработка строки запроса непосредственно здесь
+    $context.request.query = $context.request.query
+        .replace(/[.*+?!^${}()|[\]\\]/g, '')   
+        .replace(/"/g, '')                    
+        .replace(/'/g, '')  
+        .replace(/\s+/g, ' ')
+        .trim();                              
+})
+
 // КОНВЕРТЕРЫ ------------------------------------------------------------------
 function brandConverter(parseTree) {
         var id = parseTree.Brands[0].value;
@@ -35,11 +46,9 @@ function getRenderName(surName, name) {
 }
 
 
-// ОЧИСТКА СТРОКИ ОТ МУСОРА ----------------------------------------------------
-function removePhrasesForUnknownCar(str) {
-  var phrasesToRemove = [
-      'у меня', 'у нас'
-      ];
+// УДАЛЕНИЕ ФРАЗ ДЛЯ НЕИЗВЕСТНОГО АВТО ---------------------------------------
+function processingForUnknownCar(str) {
+  var phrasesToRemove = ['у меня', 'у нас'];
   var lowerStr = str.toLowerCase();
 
   for (var i = 0; i < phrasesToRemove.length; i++) {

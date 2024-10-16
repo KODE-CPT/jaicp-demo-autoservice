@@ -1,25 +1,28 @@
-theme: /smalltalk.sc
-    
-    state: Hello
+theme: /smalltalk
+
+    # Приветствие
+    state: hello
         q!: $Hello
-        a: Привет! Как дела?
+        go!: /smalltalk_a/hello
 
-        state: AnswerGood
+        state: good
             q: $Good
-            a: Это отлично! Чем я могу помочь?
+            go!: /smalltalk_a/hello/good
             
-        state: AnswerBad
+        state: bad
             q: $Bad
-            a: Ужас! Могу ли я чем-то помочь?
-                
-    state: Bye
+            go!: /smalltalk_a/hello/bad
+    
+    # Прощание           
+    state: bye
         q!: $Bye
-        a: Всего доброго и удачи на дорогах!
+        go!: /smalltalk_a/bye
 
-    state: WhoAreYou
+    # Кто ты  
+    state: whoAreYou
         q!: $WhoAreYou
-        a: Меня зовут Вася. А вас?
+        go!: /smalltalk_a/whoAreYou
         
-        state: Answer
+        state: answer
             q: *
-            a: Приятно познакомиться!
+            go!: /smalltalk_a/whoAreYou/answer

@@ -1,19 +1,24 @@
 name: zb-cailapub
 
-entryPoint: main.sc
+entryPoint: entryPoint.sc
 
 botEngine: v2
 language: ru
 
 tests:
   include:
-
-  exclude:
-    - appointment_full.xml
-    - appointment_short.xml 
-    - faq.xml    
+    - getService_full.xml
+    - getSservice_short.xml 
+    - faq.xml  
     - smalltalk.xml 
+    - errors.xml
+  exclude:
+
 nlp:
   intentNoMatchThresholds:
     phrases: 0.2
     patterns: 0.2
+  lengthLimit:
+    enabled: true
+    symbols: 400
+    words: -1
