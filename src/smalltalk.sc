@@ -5,13 +5,18 @@ theme: /smalltalk
         q!: $Hello
         go!: /smalltalk_a/hello
 
+    # Как дела
+    state: howAreYou
+        q!: $HowAreYou
+        go!: /smalltalk_a/howAreYou
+        
         state: good
             q: $Good
-            go!: /smalltalk_a/hello/good
+            go!: /smalltalk_a/howAreYou/good
             
         state: bad
             q: $Bad
-            go!: /smalltalk_a/hello/bad
+            go!: /smalltalk_a/howAreYou/bad
     
     # Прощание           
     state: bye

@@ -1,9 +1,15 @@
 theme: /smalltalk_a
     
     # Приветствие
-    state: hello
-        a: Привет! Как дела?
-        go: /smalltalk/hello
+    
+    state: hello    
+        random:
+            a: Здравствуйте!
+            a: Привет-привет!
+    
+    state: howAreYou
+        a: Отлично! А у вас?
+        go: /smalltalk/howAreYou
         
         state: good
             a: Это отлично! Чем я могу помочь?
