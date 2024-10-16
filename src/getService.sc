@@ -8,8 +8,8 @@ theme: /getService
         
 # ОТПРАВКА ЗНАЧЕНИЙ ПАРАМЕТРОВ -------------------------------------------------  
     state: name 
-        state: sendName
-            q: $SendName 
+        state: getName
+            q: $GetName 
             go!: /getService_a/name/reaction/correct
             
         state: noMatch 
@@ -17,11 +17,11 @@ theme: /getService
             go!: /getService_a/name/reaction/noMatch
 
     state: phone 
-        state: sendPhone
-            q: $SendPhone
+        state: getPhone
+            q: $GetPhone
             go!: /getService_a/phone/reaction/correct
         
-        state: sendTelegram
+        state: getTelegram
             q: $UseTelegram
             go!: /getService_a/telegram/reaction/correct 
             
@@ -30,6 +30,6 @@ theme: /getService
             go!: /getService_a/phone/reaction/noMatch    
         
     state: car 
-        state: sendCar
-            q: $SendCar
+        state: getCar
+            q: $GetCar
             go!: /getService_a/car/reaction/correct

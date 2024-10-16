@@ -8,7 +8,7 @@ language: ru
 tests:
   include:
     - getService_full.xml
-    - getSservice_short.xml 
+    - getService_short.xml 
     - faq.xml  
     - smalltalk.xml 
     - errors.xml

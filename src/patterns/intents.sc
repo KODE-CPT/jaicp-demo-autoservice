@@ -7,9 +7,9 @@ patterns:
     $GoToService = * {($GoTo|$Form|$Do|$Register|$TimeHasCome) * [$Car] * [$Service]} * {[$ClientName] * [$Phone] * [$Car]} *
     
     # Получение сущностей от пользователя
-    $SendName = * $ClientName *  
-    $SendPhone = * $Phone *  
-    $SendCar = * $Car * 
+    $GetName = * $ClientName *  
+    $GetPhone = * $Phone *  
+    $GetCar = * $Car * 
     
     # Просьба писать в Телеграм
     $UseTelegram = * (telegram|телеграм*|~телега|тг|tg) *

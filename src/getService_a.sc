@@ -19,7 +19,7 @@ theme: /getService_a
             
         state: question  
             a: Как вас зовут?
-            go: /getService/name/sendName
+            go: /getService/name/getName
 
         # Реакция на реплику пользователя: c распознанным параметром и без него 
         state: reaction
@@ -29,7 +29,7 @@ theme: /getService_a
                         
             state: noMatch 
                 a: Не похоже на имя. Попробуйте ещё раз.
-                go: /getService/name/sendName
+                go: /getService/name/getName
 
 
 # ЗАПРОС ТЕЛЕФОНА --------------------------------------------------------------                
@@ -41,8 +41,8 @@ theme: /getService_a
         state: question
             a: Напишите ваш номер телефона. Мы позвоним на него, чтобы согласовать время.
             buttons: 
-                "Напишите мне в Телеграм" -> /getService/phone/sendTelegram
-            go: /getService/phone/sendPhone
+                "Напишите мне в Телеграм" -> /getService/phone/getTelegram
+            go: /getService/phone/getPhone
         
         state: reaction    
             state: correct  
@@ -50,8 +50,8 @@ theme: /getService_a
                 go!: /getService_a/car
                         
             state: noMatch 
-                a: Не похоже на номер телефона. Напишите его в формате 8 XXX XXX-XX-XX.
-                go: /getService/phone/sendPhone   
+                a: Не похоже на номер телефона. Напишите его в формате 8 XXX XXX XX XX.
+                go: /getService/phone/getPhone   
 
 
 # РЕАКЦИЯ НА ПРОСЬБУ ИСПОЛЬЗОВАТЬ ТЕЛЕГРАМ  ------------------------------------                
@@ -60,7 +60,8 @@ theme: /getService_a
             state: correct    
                 script: 
                     $session.useTelegram = true
-                    // $session.telegram = $request.rawRequest.message.from.username  / Закоментили для прохождения автотестов
+                    $session.telegram = $request.rawRequest.message.from.username 
+                
                 a: Хорошо
                 go!: /getService_a/car
 
@@ -73,7 +74,7 @@ theme: /getService_a
             
         state: question
             a: Укажите марку или модель вашего автомобиля
-            go: /getService/car/sendCar
+            go: /getService/car/getCar
             
         state: reaction
             state: correct  
