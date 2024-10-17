@@ -28,7 +28,7 @@ theme: /faq_a
         go: /faq/reasonForService
         
         state: yes
-            go!: /service_a/start
+            go!: /getService_a/start
             
         state: no
             a: Хорошо. Будут вопросы — обращайтесь!  
