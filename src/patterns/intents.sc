@@ -4,11 +4,8 @@ patterns:
 # ЗАПИСЬ НА ТО -----------------------------------------------------------------
     
     # Точка входа («запиши меня на ТО»)
-    $GoToService = (
-        * {($GoTo|$Form|$Do|$Register|$TimeHasCome) * [$Car] * [$Service]} * {[$ClientName] * [$Phone] * [$Car]} * |
-        $Service
-        )
-    
+    $GoToService = * {($GoTo|$Form|$Do|$Register|$TimeHasCome) * [$Car] * [$Service]} * {[$ClientName] * [$Phone] * [$Car]} * 
+
     # Получение сущностей от пользователя
     $GetName = * $ClientName *  
     $GetPhone = * $Phone *  
@@ -66,6 +63,7 @@ patterns:
         )
     # Повод для записи на сервис
     $ReasonForService = (
+        $Service | 
         * проблема* |
         * (~заменить|~поменять|*чинить|*регулировать|~проверить|~проверка) *|
         * (протечка|утечка|~протекать|~подтекать|~течь) *|
