@@ -31,7 +31,7 @@ theme: /faq_a
             go!: /service_a/start
             
         state: no
-            a: Хорошо   
+            a: Хорошо. Будут вопросы — обращайтесь!  
 
     # Скидки
     state: discount 
