@@ -13,14 +13,14 @@
 13; Byd, БИД; {"name": "Byd"}
 14; Cadillac, Кадиллак, Кадилак; {"name": "Cadillac"}
 15; Changan, Чанган; {"name": "Changan"}
-16; Chery, Чери; {"name": "Chery"}
+16; Chery, Чери, Черри; {"name": "Chery"}
 17; Chevrolet, Шевроле; {"name": "Chevrolet"}
 18; Chrysler, Крайслер; {"name": "Chrysler"}
 19; Citroen, Ситроен; {"name": "Citroen"}
 20; Dacia, Дачия; {"name": "Dacia"}
-21; Daewoo, Дэу; {"name": "Daewoo"}
+21; Daewoo, Дэу, Део; {"name": "Daewoo"}
 22; Daihatsu, Дайхатсу; {"name": "Daihatsu"}
-23; Datsun, Датсун; {"name": "Datsun"}
+23; Datsun, Датсун, Датсан; {"name": "Datsun"}
 24; Dodge, Додж; {"name": "Dodge"}
 25; Dongfeng, Дунфэн; {"name": "Dongfeng"}
 26; EVOLUTE i-PRO, Эволют; {"name": "EVOLUTE i-PRO"}
@@ -29,34 +29,34 @@
 29; Ferrari, Феррари; {"name": "Ferrari"}
 30; Fiat, Фиат; {"name": "Fiat"}
 31; Ford, Форд; {"name": "Ford"}
-32; GAC, ГАК; {"name": "GAC"}
+32; GAC, ГАК, ГЭК; {"name": "GAC"}
 33; Geely, Джили; {"name": "Geely"}
 34; Genesis, Генезис; {"name": "Genesis"}
 35; GMC, ДжиЭмСи; {"name": "GMC"}
 36; Great Wall, Грейт Волл; {"name": "Great Wall"}
 37; Haima, Хайма; {"name": "Haima"}
-38; Haval, Хавейл; {"name": "Haval"}
+38; Haval, Хавейл, Хавал; {"name": "Haval"}
 39; Honda, Хонда; {"name": "Honda"}
-40; Hongqi, Хунци; {"name": "Hongqi"}
+40; Hongqi, Хунци, Хонци; {"name": "Hongqi"}
 41; Hummer, Хаммер; {"name": "Hummer"}
-42; Hyundai, Хендай; {"name": "Hyundai"}
+42; Hyundai, Хендай, Хундай; {"name": "Hyundai"}
 43; Infiniti, Инфинити; {"name": "Infiniti"}
 44; Isuzu, Исузу; {"name": "Isuzu"}
 45; JAC, Жак; {"name": "JAC"}
-46; Jaecoo, Джека; {"name": "Jaecoo"}
+46; Jaecoo, Джека, Джеко; {"name": "Jaecoo"}
 47; Jaguar, Ягуар; {"name": "Jaguar"}
 48; Jeep, Джип; {"name": "Jeep"}
 49; Jetour, Джетур; {"name": "Jetour"}
 50; Kaiyi, Каи; {"name": "Kaiyi"}
 51; Kia, Киа; {"name": "Kia"}
-52; Lamborghini, Ламборгини; {"name": "Lamborghini"}
+52; Lamborghini, Ламборгини, Ламборджини; {"name": "Lamborghini"}
 53; Lancia, Лянча; {"name": "Lancia"}
-54; Land Rover, Ленд Ровер; {"name": "Land Rover"}
+54; Land Rover, Ленд Ровер, Лэнд Ровер; {"name": "Land Rover"}
 55; Leapmotor, Липмотор; {"name": "Leapmotor"}
 56; Lexus, Лексус; {"name": "Lexus"}
 57; Lifan, Лифан; {"name": "Lifan"}
 58; Lincoln, Линкольн; {"name": "Lincoln"}
-59; LiXiang, ЛиСян; {"name": "LiXiang"}
+59; LiXiang, ЛиСян, Лисан, Ликсан; {"name": "LiXiang"}
 60; Lotus, Лотус; {"name": "Lotus"}
 61; Lynk & Co, Линк & Ко; {"name": "Lynk & Co"}
 62; MAN, МАН; {"name": "MAN"}
@@ -88,7 +88,7 @@
 88; Subaru, Субару; {"name": "Subaru"}
 89; Suzuki, Сузуки; {"name": "Suzuki"}
 90; Tagaz, Тагаз; {"name": "Tagaz"}
-91; Tank, Танк; {"name": "Tank"}
+91; Tank, Танк, Тэнк; {"name": "Tank"}
 92; Tesla, Тесла; {"name": "Tesla"}
 93; Toyota, Тойота; {"name": "Toyota"}
 94; Volkswagen, Фольксваген; {"name": "Volkswagen"}
